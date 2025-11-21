@@ -1,45 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday Drey & Ray! 🎉</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Happy Birthday Drey & Ray :DDD</title>
 </head>
-
 <body>
     <div class="container">
-        <div class="initial-screen" id="initial-screen">
-            <h1>🎂 Twin Birthday Surprise! 🎂</h1>
+        <div class="initial-screen" id="initialScreen">
+            <h1>🎂 A Birthday Surprise for my Favourite Twins! 🎂</h1>
             <button class="surprise-btn">Click for Birthday Surprise</button>
         </div>
 
-        <div class="twin-choices">
-            <div class="twin-card" id="drey-card">
-                <h2>✨ Audrey ✨</h2>
-                <p>🎈</p>
+        <!-- Twin Choice Cards -->
+         <div class="twin-choices" id="twinChoices">
+            <div class="twin-card">
+                <div class="profile-photo-container">
+                    <img src="drey.jpg" alt="Drey" class="profile-photo">
+                </div>
+                <h2>Audrey Bernadette Lukman</h2>
+                <p class="descriptor">🎈Drey</p>
             </div>
 
-            <div class="twin-card" id="ray-card">
-                <h2>✨ Aurora ✨</h2>
-                <p>Ray</p>
+            <div class="twin-card">
+                <div class="profile-photo-container">
+                    <img src="ray.jpg" alt="Ray" class="profile-photo">
+                </div>
+                <h2>Aurora Josephine Lukman</h2>
+                <p class="descriptor">✨Ray</p>
             </div>
-        </div>
+         </div>
 
-        <div class="birthday-message" id="dreyMessage">
-            <h1>Happy Birthday Drey! <span class="emoji">🎉</span></h1>
-            <p>Write a message here!!!!!!!!!!!!!!!!!!!!</p>
-            <button class="back-btn">Back</button>
-        </div>
-        <div class="birthday-message" id="rayMessage">
-            <h1>Happy Birthday Ray! <span class="emoji">🎂</span></h1>
-            <p>Write a message here!!!!!!!!!!!!!!!!!!!!</p>
-            <button class="back-btn">Back</button>
-        </div>
+         <!-- Drey's Birthday Message -->
+          <div class="birthday-message drey-bg" id="dreyMessage">
+            <div class="message-overlay">
+                <h1>Happy Birthday Drey! 🎉</h1>
+                <div class="message-card">
+                    <p>
+                        To the person who lights up every room...<br><br>
+                        your mere existence turns even the simplest moments into something brighter <br><br>
+                        May your special day be as warm and calm as the setting sun 🗣<br><br>
+                        and may this year bless you with everything you are searching for. <br><br>
+                        No matter who you are or who you grow into, I'll always accept you in every form as a friend <br><br>
+                        I am here for you through it all. 💛😝 <br><br>
+                        Here's to another year of being an amazing self la 😭💖✨<br><br>
+                        Keep slayinggg queen‼‼🗣🗣🗣🎊☁
+                    </p>
+                </div>
+                <button class="back-btn">Back</button>
+            </div>
+          </div>
 
+          <!-- Ray's Birthday Message -->
+          <div class="birthday-message ray-bg" id="rayMessage">
+            <div class="message-overlay">
+                <h1>Happy Birthday Ray! 🎂</h1>
+                <div class="message-card">
+                    <p>
+                        To the one whose every breath fills the air with a little bit of magic 🗣🗣<br><br>
+                        Your presence makes life feel lighter, brighter, and far more amazing. 🙇‍♀️🙇‍♀️ <br><br>
+                        May your birthday be as enchanting as the night sky at its calmest🤭, <br><br>
+                        and may this year gift you with the confidence to keep being who you are - <br><br>
+                        our strongest sorcerer of today 🗣🗣🗣🗣😭, someone I'd never want to change for anything 😴<br><br>
+                        I am here for you through it all. 💛😝 <br><br>
+                        Keep slayingggg queeennn‼‼🗣🗣🗣💖
+                    </p>
+                </div>
+                <button class="back-btn">Back</button>
+            </div>
+          </div>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>
