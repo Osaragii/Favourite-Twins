@@ -6,7 +6,7 @@
 
 body {
     min-height: 100vh;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     justify-content: center;
@@ -15,9 +15,23 @@ body {
 }
 
 .container {
+    height: 100vh;
+    width: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Initial Screen */
+.initial-screen {
+    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    z-index: 1;
-    position: relative;
 }
 
 .initial-screen h1 {
@@ -28,26 +42,40 @@ body {
 }
 
 .surprise-btn {
-    background: linear-gradient(45deg, #ff6b6b, #feca57);
+    background: radial-gradient(45deg, #ff6b6b, #feca57);
     border: none;
     padding: 20px 50px;
-    text-transform: uppercase;
     font-size: 1.5rem;
     font-weight: bold;
     color: white;
-    border-radius: 50px;
+    border-radius: 50p;
     cursor: pointer;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    transition: all 0.3 ease;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
     letter-spacing: 2px;
 }
 
 .surprise-btn:hover {
     transform: translateY(-5px);
-    box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
 }
 
 .surprise-btn:active {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+    transform: translateY(-2px);
 }
+
+/* Twin Choice Screen */
+.twin-choices {
+    display: none;
+    gap: 60px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Starry Background Animation */
