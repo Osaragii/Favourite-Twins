@@ -707,7 +707,14 @@ body {
 
     .twin-card:hover .profile-photo {
         transform: scale(1.05);
-        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    .twin-card:first-of-type:hover .profile-photo {
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4); /* Dark shadow for Drey */
+    }
+
+    .twin-card:last-of-type:hover .profile-photo {
+        box-shadow: 0 15px 40px rgba(255, 255, 255, 0.4); /* White/silver glow for Ray */
     }
     
     .twin-card:hover .profile-photo.photo-hover {
