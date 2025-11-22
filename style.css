@@ -144,15 +144,20 @@ body {
 }
 
 .twin-card:first-of-type:hover {
-    box-shadow: 0 25px 70px rgba(123, 167, 255, 0.8); /* Stronger blue glow on hover */
+    box-shadow: 0 25px 70px rgba(123, 167, 255, 0.8);
 }
 
 .twin-card:last-of-type:hover {
-    box-shadow: 0 25px 70px rgba(207, 207, 207, 0.6); /* Stronger silver glow on hover */
+    box-shadow: 0 25px 70px rgba(207, 207, 207, 0.6);
 }
 
 .profile-photo-container {
     margin-bottom: 20px;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .profile-photo {
@@ -162,7 +167,15 @@ body {
     object-fit: cover;
     border: 5px solid black;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease;
+    transition: opacity 0.6s ease, transform 0.3s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.profile-photo.photo-hover {
+    opacity: 0;
+    z-index: 2;
 }
 
 .twin-card:first-of-type .profile-photo {
@@ -171,11 +184,6 @@ body {
 
 .twin-card:last-of-type .profile-photo {
     border-color: #cfcfcf;
-}
-
-.twin-card:hover .profile-photo {
-    transform: scale(1.05);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
 }
 
 .twin-card:first-of-type h2 {
@@ -367,6 +375,11 @@ body {
         font-size: 1rem;
     }
     
+    .profile-photo-container {
+        width: 120px;
+        height: 120px;
+    }
+    
     .profile-photo {
         width: 120px;
         height: 120px;
@@ -436,6 +449,11 @@ body {
         font-size: 1.1rem;
     }
     
+    .profile-photo-container {
+        width: 150px;
+        height: 150px;
+    }
+    
     .profile-photo {
         width: 150px;
         height: 150px;
@@ -487,6 +505,11 @@ body {
         font-size: 2rem;
     }
     
+    .profile-photo-container {
+        width: 180px;
+        height: 180px;
+    }
+    
     .profile-photo {
         width: 180px;
         height: 180px;
@@ -513,6 +536,11 @@ body {
     
     .twin-card {
         min-width: 280px;
+    }
+    
+    .profile-photo-container {
+        width: 190px;
+        height: 190px;
     }
     
     .profile-photo {
@@ -547,6 +575,11 @@ body {
     
     .twin-card h2 {
         font-size: 2.8rem;
+    }
+    
+    .profile-photo-container {
+        width: 220px;
+        height: 220px;
     }
     
     .profile-photo {
@@ -595,6 +628,11 @@ body {
         font-size: 1.2rem;
     }
     
+    .profile-photo-container {
+        width: 100px;
+        height: 100px;
+    }
+    
     .profile-photo {
         width: 100px;
         height: 100px;
@@ -630,18 +668,15 @@ body {
 /* Touch Device Optimizations */
 @media (hover: none) and (pointer: coarse) {
     .twin-card {
-        /* Larger touch targets for mobile */
         padding: 40px;
     }
     
     .surprise-btn,
     .back-btn {
-        /* Ensure buttons are easy to tap */
         min-height: 48px;
         min-width: 48px;
     }
     
-    /* Remove hover effects on touch devices */
     .twin-card:hover {
         transform: none;
     }
@@ -652,7 +687,6 @@ body {
     }
     
     .profile-photo {
-        /* Prevent accidental zoom on tap */
         touch-action: manipulation;
     }
 }
@@ -676,6 +710,10 @@ body {
         box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
     }
     
+    .twin-card:hover .profile-photo.photo-hover {
+        opacity: 1;
+    }
+    
     .surprise-btn:hover {
         transform: translateY(-5px);
         box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
@@ -691,7 +729,6 @@ body {
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
     .twin-card,
     .message-card {
-        /* Sharper borders on retina displays */
         border: 0.5px solid rgba(255, 255, 255, 0.1);
     }
 }
