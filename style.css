@@ -141,7 +141,6 @@ body {
 
 .twin-card:hover {
     transform: translateY(-15px) scale(1.05);
-    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.6);
 }
 
 .twin-card:first-of-type:hover {
@@ -329,25 +328,112 @@ body {
     }
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
+/* ============================================
+   RESPONSIVE DESIGN - OPTIMIZED FOR ALL DEVICES
+   ============================================ */
+
+/* Extra Small Devices (Portrait Phones, less than 576px) */
+@media (max-width: 575px) {
     .initial-screen h1 {
-        font-size: 2em;
+        font-size: 1.5rem;
+        padding: 0 15px;
+        line-height: 1.3;
     }
     
     .surprise-btn {
-        font-size: 1.2em;
-        padding: 15px 35px;
+        font-size: 1rem;
+        padding: 15px 30px;
+        letter-spacing: 1px;
     }
     
     .twin-choices {
         flex-direction: column;
         gap: 30px;
+        padding: 15px;
+    }
+    
+    .twin-card {
+        min-width: 90%;
+        max-width: 320px;
+        padding: 25px;
+    }
+    
+    .twin-card h2 {
+        font-size: 1.3rem;
+        line-height: 1.2;
+    }
+    
+    .descriptor {
+        font-size: 1rem;
+    }
+    
+    .profile-photo {
+        width: 120px;
+        height: 120px;
+        border-width: 4px;
+    }
+    
+    .message-overlay {
+        padding: 15px;
+    }
+    
+    .message-overlay h1 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+    
+    .message-card {
+        padding: 25px;
+        max-width: 95%;
+    }
+    
+    .message-card p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+    
+    .back-btn {
+        padding: 12px 35px;
+        font-size: 1rem;
+        margin-top: 20px;
+    }
+    
+    .confetti {
+        width: 8px;
+        height: 8px;
+    }
+}
+
+/* Small Devices (Landscape Phones, 576px to 767px) */
+@media (min-width: 576px) and (max-width: 767px) {
+    .initial-screen h1 {
+        font-size: 2rem;
+        padding: 0 20px;
+    }
+    
+    .surprise-btn {
+        font-size: 1.2rem;
+        padding: 18px 40px;
+    }
+    
+    .twin-choices {
+        flex-direction: column;
+        gap: 40px;
         padding: 20px;
     }
     
     .twin-card {
-        min-width: 250px;
+        min-width: 300px;
+        max-width: 380px;
+        padding: 35px;
+    }
+    
+    .twin-card h2 {
+        font-size: 1.6rem;
+    }
+    
+    .descriptor {
+        font-size: 1.1rem;
     }
     
     .profile-photo {
@@ -355,31 +441,275 @@ body {
         height: 150px;
     }
     
-    .twin-card h2 {
-        font-size: 1.5em;
-    }
-    
     .message-overlay h1 {
-        font-size: 2.5em;
+        font-size: 2.5rem;
+        margin-bottom: 25px;
     }
     
     .message-card {
         padding: 30px;
+        max-width: 90%;
     }
     
     .message-card p {
-        font-size: 1em;
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+    
+    .back-btn {
+        padding: 14px 40px;
+        font-size: 1.1rem;
     }
 }
 
+/* Medium Devices (Tablets, 768px to 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .initial-screen h1 {
+        font-size: 2.5rem;
+    }
+    
+    .surprise-btn {
+        font-size: 1.3rem;
+        padding: 18px 45px;
+    }
+    
+    .twin-choices {
+        gap: 50px;
+        padding: 30px;
+    }
+    
+    .twin-card {
+        min-width: 280px;
+        max-width: 320px;
+    }
+    
+    .twin-card h2 {
+        font-size: 2rem;
+    }
+    
+    .profile-photo {
+        width: 180px;
+        height: 180px;
+    }
+    
+    .message-overlay h1 {
+        font-size: 3rem;
+    }
+    
+    .message-card {
+        max-width: 650px;
+    }
+    
+    .message-card p {
+        font-size: 1.1rem;
+    }
+}
+
+/* Large Devices (Desktops, 992px to 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .initial-screen h1 {
+        font-size: 2.8rem;
+    }
+    
+    .twin-card {
+        min-width: 280px;
+    }
+    
+    .profile-photo {
+        width: 190px;
+        height: 190px;
+    }
+    
+    .message-overlay h1 {
+        font-size: 3.5rem;
+    }
+}
+
+/* Extra Large Devices (Large Desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .initial-screen h1 {
+        font-size: 3.5rem;
+    }
+    
+    .surprise-btn {
+        font-size: 1.6rem;
+        padding: 22px 55px;
+    }
+    
+    .twin-choices {
+        gap: 80px;
+    }
+    
+    .twin-card {
+        min-width: 320px;
+        padding: 50px;
+    }
+    
+    .twin-card h2 {
+        font-size: 2.8rem;
+    }
+    
+    .profile-photo {
+        width: 220px;
+        height: 220px;
+    }
+    
+    .message-overlay h1 {
+        font-size: 4.5rem;
+    }
+    
+    .message-card {
+        max-width: 800px;
+        padding: 50px;
+    }
+    
+    .message-card p {
+        font-size: 1.3rem;
+    }
+}
+
+/* Landscape Orientation Specific (for phones in landscape) */
+@media (max-height: 500px) and (orientation: landscape) {
+    .initial-screen h1 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+    
+    .surprise-btn {
+        padding: 12px 30px;
+        font-size: 1rem;
+    }
+    
+    .twin-choices {
+        flex-direction: row;
+        gap: 30px;
+        padding: 10px;
+    }
+    
+    .twin-card {
+        padding: 20px;
+        min-width: 200px;
+    }
+    
+    .twin-card h2 {
+        font-size: 1.2rem;
+    }
+    
+    .profile-photo {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .message-overlay {
+        padding: 10px;
+    }
+    
+    .message-overlay h1 {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+    }
+    
+    .message-card {
+        padding: 20px;
+        max-height: 70vh;
+        overflow-y: auto;
+    }
+    
+    .message-card p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+    
+    .back-btn {
+        padding: 10px 25px;
+        font-size: 0.9rem;
+        margin-top: 15px;
+    }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) and (pointer: coarse) {
+    .twin-card {
+        /* Larger touch targets for mobile */
+        padding: 40px;
+    }
+    
+    .surprise-btn,
+    .back-btn {
+        /* Ensure buttons are easy to tap */
+        min-height: 48px;
+        min-width: 48px;
+    }
+    
+    /* Remove hover effects on touch devices */
+    .twin-card:hover {
+        transform: none;
+    }
+    
+    .twin-card:active {
+        transform: scale(0.98);
+        transition: transform 0.1s;
+    }
+    
+    .profile-photo {
+        /* Prevent accidental zoom on tap */
+        touch-action: manipulation;
+    }
+}
+
+/* Hover-capable Device Optimizations */
 @media (hover: hover) and (pointer: fine) {
     .twin-card:hover {
         transform: translateY(-15px) scale(1.05);
-        box-shadow: 0 25px 70px rgba(0, 0, 0, 0.6);
+    }
+    
+    .twin-card:first-of-type:hover {
+        box-shadow: 0 25px 70px rgba(123, 167, 255, 0.8);
+    }
+    
+    .twin-card:last-of-type:hover {
+        box-shadow: 0 25px 70px rgba(207, 207, 207, 0.6);
     }
 
     .twin-card:hover .profile-photo {
         transform: scale(1.05);
         box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+    }
+    
+    .surprise-btn:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+    }
+    
+    .back-btn:hover {
+        transform: scale(1.05);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+    }
+}
+
+/* High Resolution Displays (Retina) */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .twin-card,
+    .message-card {
+        /* Sharper borders on retina displays */
+        border: 0.5px solid rgba(255, 255, 255, 0.1);
+    }
+}
+
+/* Print Styles (in case someone wants to print) */
+@media print {
+    body {
+        background: white;
+    }
+    
+    .surprise-btn,
+    .back-btn,
+    .confetti {
+        display: none;
+    }
+    
+    .birthday-message {
+        display: block !important;
+        page-break-after: always;
     }
 }
