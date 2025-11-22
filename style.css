@@ -237,6 +237,14 @@ body {
     animation: slideUp 0.8s ease;
 }
 
+.birthday-message.drey-bg .message-overlay .message-card {
+    background: linear-gradient(45deg, white 0%, aqua 100%);
+}
+
+.birthday-message.ray-bg .message-overlay .message-card {
+    background: linear-gradient(45deg, white 0%, hotpink 100%);
+}
+
 .message-card p {
     font-size: 1.2rem;
     line-height: 1.8;
