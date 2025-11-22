@@ -10,7 +10,8 @@ function createConfetti() {
             confetti.style.animationDuration = (Math.random() * 2 + 2) + 's';
             document.body.appendChild(confetti);
             
-            setTimeout(() => confetti.remove(), 5000);
+            // Changed from 5000 to 3000 to match animation duration
+            setTimeout(() => confetti.remove(), 3000);
         }, i * 30);
     }
 }

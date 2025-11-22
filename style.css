@@ -16,7 +16,7 @@ body {
 
 .container {
     height: 100vh;
-    width: 100vh;
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -42,7 +42,7 @@ body {
 }
 
 .surprise-btn {
-    background: linear-gradient(45deg ,#ff6b6b 0%, #feca57 100%);
+    background: linear-gradient(45deg, #ff6b6b 0%, #feca57 100%);
     border: none;
     padding: 20px 50px;
     font-size: 1.5rem;
@@ -79,7 +79,7 @@ body {
 }
 
 /* Starry Background Animation */
-.twin-choice::before {
+.twin-choices::before {
     content: '';
     position: absolute;
     top: 0;
@@ -92,23 +92,22 @@ body {
         radial-gradient(1px 1px at 50px 50px, white, transparent),
         radial-gradient(1px 1px at 130px 80px, white, transparent),
         radial-gradient(2px 2px at 90px 10px, white, transparent);
-
     background-size: 200px 200px;
     animation: twinkle 3s infinite;
     opacity: 0.8;
 }
 
 @keyframes twinkle {
-    0%, 100% {opacity: 0.9;}
-    25% {opacity: 0.725;}
-    50% {opacity: 0.45;}
+    0%, 100% { opacity: 0.9; }
+    25% { opacity: 0.725; }
+    50% { opacity: 0.45; }
 }
 
 .twin-card {
     background: rgba(255, 255, 255, 0.95);
     padding: 40px;
     border-radius: 30px;
-    box-shadow: 0 20px 60px rgba(255, 255, 255, 0.4);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
     cursor: pointer;
     transition: all 0.4s ease;
     text-align: center;
@@ -116,6 +115,18 @@ body {
     position: relative;
     z-index: 10;
     backdrop-filter: blur(10px);
+}
+
+.twin-card h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    word-break: break-word;
+    hyphens: auto;
+}
+
+.descriptor {
+    font-size: 1.2rem;
+    font-style: italic;
 }
 
 .twin-card:first-of-type {
@@ -227,7 +238,7 @@ body {
 }
 
 .message-card p {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     line-height: 1.8;
     color: #2c3e50;
 }
@@ -258,7 +269,6 @@ body {
     width: 10px;
     height: 10px;
     top: -20px;
-    position: absolute;
     animation: confetti-fall 3s linear;
     z-index: 100;
 }
@@ -271,9 +281,11 @@ body {
 }
 
 @keyframes fadeIn {
-    to {
-        transform: translateY(100vh) rotate(360deg);
+    from {
         opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 }
 
@@ -300,3 +312,56 @@ body {
 }
 
 /* Responsive Design */
+@media (max-width: 768px) {
+    .initial-screen h1 {
+        font-size: 2em;
+    }
+    
+    .surprise-btn {
+        font-size: 1.2em;
+        padding: 15px 35px;
+    }
+    
+    .twin-choices {
+        flex-direction: column;
+        gap: 30px;
+        padding: 20px;
+    }
+    
+    .twin-card {
+        min-width: 250px;
+    }
+    
+    .profile-photo {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .twin-card h2 {
+        font-size: 1.5em;
+    }
+    
+    .message-overlay h1 {
+        font-size: 2.5em;
+    }
+    
+    .message-card {
+        padding: 30px;
+    }
+    
+    .message-card p {
+        font-size: 1em;
+    }
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .twin-card:hover {
+        transform: translateY(-15px) scale(1.05);
+        box-shadow: 0 25px 70px rgba(0, 0, 0, 0.6);
+    }
+
+    .twin-card:hover .profile-photo {
+        transform: scale(1.05);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+    }
+}
