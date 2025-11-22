@@ -131,15 +131,25 @@ body {
 
 .twin-card:first-of-type {
     background: linear-gradient(180deg, #7BA7FF 0%, #3F63FF 100%);
+    box-shadow: 0 20px 60px rgba(123, 167, 255, 0.6);
 }
 
 .twin-card:last-of-type {
     background: linear-gradient(180deg, #1A1625 0%, #000 100%);
+    box-shadow: 0 20px 60px rgba(207, 207, 207, 0.4);
 }
 
 .twin-card:hover {
     transform: translateY(-15px) scale(1.05);
     box-shadow: 0 25px 70px rgba(0, 0, 0, 0.6);
+}
+
+.twin-card:first-of-type:hover {
+    box-shadow: 0 25px 70px rgba(123, 167, 255, 0.8); /* Stronger blue glow on hover */
+}
+
+.twin-card:last-of-type:hover {
+    box-shadow: 0 25px 70px rgba(207, 207, 207, 0.6); /* Stronger silver glow on hover */
 }
 
 .profile-photo-container {
