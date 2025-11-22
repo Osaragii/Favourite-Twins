@@ -10,12 +10,12 @@
     <div class="container">
         <div class="initial-screen" id="initialScreen">
             <h1>🎂 A Birthday Surprise for my Favourite Twins! 🎂</h1>
-            <button class="surprise-btn">Click for Birthday Surprise</button>
+            <button class="surprise-btn" onclick="showChoices()">Click for Birthday Surprise</button>
         </div>
 
         <!-- Twin Choice Cards -->
          <div class="twin-choices" id="twinChoices">
-            <div class="twin-card">
+            <div class="twin-card" onclick="showMessage('drey')">
                 <div class="profile-photo-container">
                     <img src="drey.jpg" alt="Drey" class="profile-photo">
                 </div>
@@ -23,7 +23,7 @@
                 <p class="descriptor">🎈Drey</p>
             </div>
 
-            <div class="twin-card">
+            <div class="twin-card" onclick="showMessage('ray')">
                 <div class="profile-photo-container">
                     <img src="ray.jpg" alt="Ray" class="profile-photo">
                 </div>
@@ -48,7 +48,7 @@
                         Keep slayinggg queen‼‼🗣🗣🗣🎊☁
                     </p>
                 </div>
-                <button class="back-btn">Back</button>
+                <button class="back-btn" onclick="reset()">Back</button>
             </div>
           </div>
 
@@ -67,7 +67,7 @@
                         Keep slayingggg queeennn‼‼🗣🗣🗣💖
                     </p>
                 </div>
-                <button class="back-btn">Back</button>
+                <button class="back-btn" onclick="reset()">Back</button>
             </div>
           </div>
     </div>
